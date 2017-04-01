@@ -26,7 +26,8 @@ class LyricsUtils{
         return ""
     }
     
-    static func lyricsForName(fullName: String) -> String {
+   
+    public static func lyricsForName(fullName: String) -> String {
         let shortName = shortNameFromName(name:fullName)
         let fullNameFormat = "<FULL_NAME>"
         let shortNameFormat = "<SHORT_NAME>"
