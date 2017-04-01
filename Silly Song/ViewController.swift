@@ -26,7 +26,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBAction func handleReset(_ sender: UITextField) {
         mNameField.text = ""
         mLyricsView.text = ""
-        
     }
 
     @IBAction func handleLyricsDisplay(_ sender: UITextField) {
