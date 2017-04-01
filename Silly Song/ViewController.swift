@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITextFieldDelegate {
+    @IBOutlet weak var mNameField: UITextField!
+    @IBOutlet weak var mLyricsView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mNameField.delegate = self
+        mNameField.autocorrectionType = .no
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func handleReset(_ sender: UITextField) {
+        mNameField.text = ""
+        mLyricsView.text = ""
+        
+    }
 
+    @IBAction func handleLyricsDisplay(_ sender: UITextField) {
+        let name = mNameField.text
+        if (name != nil) && name != ""{
+            let sillyLyrics = LyricsUtils.lyricsForName(fullName: name!)
+            if(sillyLyrics != ""){
+                mLyricsView.text = sillyLyrics
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
 }
 
