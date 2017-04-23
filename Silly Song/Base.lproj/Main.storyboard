@@ -70,8 +70,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mLyricsView" destination="9vl-62-RTp" id="wzc-Ys-2nP"/>
-                        <outlet property="mNameField" destination="nrg-Dg-HjV" id="PDF-VO-hD6"/>
+                        <outlet property="lyricsView" destination="9vl-62-RTp" id="H66-ZH-Lz3"/>
+                        <outlet property="nameField" destination="nrg-Dg-HjV" id="SIu-IP-3bG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

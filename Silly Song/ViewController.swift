@@ -9,26 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController , UITextFieldDelegate {
-    @IBOutlet weak var mNameField: UITextField!
-    @IBOutlet weak var mLyricsView: UITextView!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var lyricsView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mNameField.delegate = self
-        mNameField.autocorrectionType = .no
+        nameField.delegate = self
+        nameField.autocorrectionType = .no
     }
 
     @IBAction func handleReset(_ sender: UITextField) {
-        mNameField.text = ""
-        mLyricsView.text = ""
+        nameField.text = ""
+        lyricsView.text = ""
     }
 
     @IBAction func handleLyricsDisplay(_ sender: UITextField) {
-        let name = mNameField.text
+        let name = nameField.text
         if (name != nil) && name != ""{
             let sillyLyrics = LyricsUtils.lyricsForName(fullName: name!)
             if(sillyLyrics != ""){
-                mLyricsView.text = sillyLyrics
+                lyricsView.text = sillyLyrics
             }
         }
     }
