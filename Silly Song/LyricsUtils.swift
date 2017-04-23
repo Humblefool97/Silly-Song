@@ -23,7 +23,7 @@ class LyricsUtils{
             
             return  name.substring(from:startIndex).lowercased()
         }
-        return ""
+        return newName
     }
     
    
